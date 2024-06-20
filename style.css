@@ -1,0 +1,207 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    text-decoration: none;
+}
+
+   
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+}
+
+ .container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #b2fdd2, #def2f1, #feffff);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+  margin: auto;
+ }
+
+ /* kotak yg ade blur*/
+.container::before {
+    content: "";
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left:0;
+    min-width: 500px;
+    background-image: linear-gradient(to right, #b2fdd2, #def2f1);
+    
+    
+}
+
+.container .hero{
+    position: absolute;
+    z-index: 10;
+    height: 85vh;
+    width: 75%;
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 3px solid #DEF2F1;
+    border-radius: 20px;
+    box-shadow:  17px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 10 40px 10 88px;
+    min-width: 80px;
+  margin: auto;
+}
+
+.sidebar {
+    position:fixed;
+    margin-top: 1;
+    left: 0;
+    nav-left: root;
+    z-index: 10;
+    width: 83px;
+    display: flex;
+    border: 1px;
+    border-radius: 10px;
+    flex-direction: column;
+    overflow: hidden;
+    background: #3aafa9;
+    padding: 10px 20px;
+    transition: all 0.4s ease;
+}
+
+/* nav jadi kecik ke besar*/
+.sidebar:hover {
+    width: 240px;
+}
+
+.body {
+    min-height: 100vh;
+    background: color #3aafa9; ;
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links h4 {
+    color: #17252a;
+    font-weight: 500;
+    margin: 10px 10 px;
+    white-space: nowrap;
+}
+
+/* nav punye icon*/
+.sidebar-links .menu-separator {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    transform: scaleX(1);
+    transform: translateY(-50%);
+    background: #3aafa9;
+    transform-origin: right;
+    transition-duration: 0.2s;
+}
+
+/* nav punye transition*/
+.sidebar:hover .sidebar-links .menu-separator {
+    transition-delay: 0s;
+    transform: scaleX(0);
+}
+
+
+.sidebar-links li a {
+    display:flex;
+    align-items: center;
+    gap: 0 20px;
+    color: #17252a;
+    font-weight: 500;
+    padding: 15px 20px;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+
+/*nav tukar jadi warna lain bile curso kat nav*/
+.sidebar-links li a:hover {
+    background: rgb(171, 232, 246);
+    color: #feffff;
+    border-radius: 4px;
+}
+
+/*article*/
+.hero .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 150px;
+    min-width: 500px;
+  margin: auto;
+}
+
+.hero .content .div-text {
+    width: 50%;
+    margin-left: 110px;
+    min-width: auto;
+}
+
+.hero .content .div-text h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    text-shadow: 10px 17px 17px rgba(11, 11, 11, 0.19), 0 0 5px #feffff;
+    color: #3aafa9;
+    min-width: 500px;
+  margin: auto;
+  padding-left: 20px;
+}
+
+.hero .content .div-text h4 {
+    margin-bottom: 10px;
+    font-size: 19px;
+    color: #17252a;
+    text-shadow: 10px 17px 17px rgba(11, 11, 11, 0.19),0 0 5px #feffff;;
+    min-width: 500px;
+    margin: auto;  
+    padding-left: 20px;  
+}
+
+.hero .content .div-img{
+    width: 40%;
+    padding-left: 50px;
+    min-width: 500px;
+  margin: auto;
+}
+
+.hero .content .div-img img{
+    width: 80%;
+    align-items:normal;
+    padding: 40px;
+    position: static;
+    display: block;
+    min-width: 10px;
+    
+}
+
+.footer {
+background: #17252a;
+padding: 10px;
+text-align: center;
+color: #feffff;
+display: fixed;
+min-width: 500px;
+  margin: auto;
+}
